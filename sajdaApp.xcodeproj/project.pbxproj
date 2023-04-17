@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3A78DF29ECE38100183CC3 /* CompasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A78DE29ECE38100183CC3 /* CompasViewController.swift */; };
+		AF3A78E129ECE84900183CC3 /* CustomBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A78E029ECE84900183CC3 /* CustomBarController.swift */; };
 		AF9772BE29EBF0B000AB81CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9772BD29EBF0B000AB81CE /* AppDelegate.swift */; };
 		AF9772C029EBF0B000AB81CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9772BF29EBF0B000AB81CE /* SceneDelegate.swift */; };
 		AF9772C229EBF0B000AB81CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9772C129EBF0B000AB81CE /* ViewController.swift */; };
 		AF9772C529EBF0B000AB81CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9772C329EBF0B000AB81CE /* Main.storyboard */; };
 		AF9772C729EBF0B100AB81CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9772C629EBF0B100AB81CE /* Assets.xcassets */; };
 		AF9772CA29EBF0B100AB81CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9772C829EBF0B100AB81CE /* LaunchScreen.storyboard */; };
+		AFA3BC1D29EBFF0700872414 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3BC1C29EBFF0700872414 /* Prayer.swift */; };
+		AFA3BC1F29EC136600872414 /* PrayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3BC1E29EC136600872414 /* PrayerModel.swift */; };
+		AFA3BC2129EC15ED00872414 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3BC2029EC15ED00872414 /* TimeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3A78DE29ECE38100183CC3 /* CompasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompasViewController.swift; sourceTree = "<group>"; };
+		AF3A78E029ECE84900183CC3 /* CustomBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarController.swift; sourceTree = "<group>"; };
 		AF9772BA29EBF0B000AB81CE /* sajdaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sajdaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9772BD29EBF0B000AB81CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9772BF29EBF0B000AB81CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		AF9772C629EBF0B100AB81CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9772C929EBF0B100AB81CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF9772CB29EBF0B100AB81CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA3BC1C29EBFF0700872414 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
+		AFA3BC1E29EC136600872414 /* PrayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerModel.swift; sourceTree = "<group>"; };
+		AFA3BC2029EC15ED00872414 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		AF9772BC29EBF0B000AB81CE /* sajdaApp */ = {
 			isa = PBXGroup;
 			children = (
-				AF9772BD29EBF0B000AB81CE /* AppDelegate.swift */,
 				AF9772BF29EBF0B000AB81CE /* SceneDelegate.swift */,
-				AF9772C129EBF0B000AB81CE /* ViewController.swift */,
-				AF9772C329EBF0B000AB81CE /* Main.storyboard */,
-				AF9772C629EBF0B100AB81CE /* Assets.xcassets */,
-				AF9772C829EBF0B100AB81CE /* LaunchScreen.storyboard */,
+				AF9772BD29EBF0B000AB81CE /* AppDelegate.swift */,
 				AF9772CB29EBF0B100AB81CE /* Info.plist */,
+				AF9772C629EBF0B100AB81CE /* Assets.xcassets */,
+				AF9772D429EBF0F100AB81CE /* SecondaryFiles */,
+				AF9772D329EBF0E700AB81CE /* Controller */,
+				AF9772D229EBF0E200AB81CE /* View */,
+				AF9772D129EBF0CF00AB81CE /* Model */,
 			);
 			path = sajdaApp;
+			sourceTree = "<group>";
+		};
+		AF9772D129EBF0CF00AB81CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFA3BC1C29EBFF0700872414 /* Prayer.swift */,
+				AFA3BC1E29EC136600872414 /* PrayerModel.swift */,
+				AFA3BC2029EC15ED00872414 /* TimeManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF9772D229EBF0E200AB81CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF9772C329EBF0B000AB81CE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF9772D329EBF0E700AB81CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF9772C129EBF0B000AB81CE /* ViewController.swift */,
+				AF3A78DE29ECE38100183CC3 /* CompasViewController.swift */,
+				AF3A78E029ECE84900183CC3 /* CustomBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF9772D429EBF0F100AB81CE /* SecondaryFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AF9772C829EBF0B100AB81CE /* LaunchScreen.storyboard */,
+			);
+			path = SecondaryFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3A78E129ECE84900183CC3 /* CustomBarController.swift in Sources */,
+				AFA3BC1F29EC136600872414 /* PrayerModel.swift in Sources */,
 				AF9772C229EBF0B000AB81CE /* ViewController.swift in Sources */,
+				AFA3BC2129EC15ED00872414 /* TimeManager.swift in Sources */,
 				AF9772BE29EBF0B000AB81CE /* AppDelegate.swift in Sources */,
+				AFA3BC1D29EBFF0700872414 /* Prayer.swift in Sources */,
 				AF9772C029EBF0B000AB81CE /* SceneDelegate.swift in Sources */,
+				AF3A78DF29ECE38100183CC3 /* CompasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
