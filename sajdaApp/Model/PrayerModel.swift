@@ -14,13 +14,20 @@ struct PrayerModel: Codable{
 
 struct Datas: Codable{
     var timings: Timings
+    var meta: Meta
+    
 }
 
 struct Timings: Codable{
     var Fajr: String
+    var Sunrise: String
     var Dhuhr: String
     var Asr: String
     var Maghrib: String
     var Isha: String
+}
+
+struct Meta: Codable{
+    var timezone: String
 }
 

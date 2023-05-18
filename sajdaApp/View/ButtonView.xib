@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="8FI-JA-ZIe" customClass="Butto">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="155"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kDt-qZ-JNu" customClass="ButtonCell" customModule="sajdaApp" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="155"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7R5-gC-L7G">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="155"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-vN-lqf">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="70"/>
+                                <color key="backgroundColor" red="0.054546527560000002" green="0.359759897" blue="0.38224792480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="pXM-u6-3vm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFn-2h-4tH">
+                                <rect key="frame" x="0.0" y="85" width="90" height="70"/>
+                                <color key="backgroundColor" red="0.054546527560000002" green="0.359759897" blue="0.38224792480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ywD-yB-Ggs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7R5-gC-L7G" secondAttribute="trailing" id="Ukt-R7-cRT"/>
+                    <constraint firstAttribute="bottom" secondItem="7R5-gC-L7G" secondAttribute="bottom" id="aK4-Hj-aoN"/>
+                    <constraint firstItem="7R5-gC-L7G" firstAttribute="leading" secondItem="kDt-qZ-JNu" secondAttribute="leading" id="ljJ-Zv-zEm"/>
+                    <constraint firstItem="7R5-gC-L7G" firstAttribute="top" secondItem="kDt-qZ-JNu" secondAttribute="top" id="rFn-Nv-woN"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="199" height="474"/>
+            <connections>
+                <outlet property="bottomButton" destination="eFn-2h-4tH" id="lT3-8b-NlD"/>
+                <outlet property="topButton" destination="Y7d-vN-lqf" id="02x-dH-72t"/>
+            </connections>
+            <point key="canvasLocation" x="55.725190839694655" y="121.83098591549296"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GroupViewCell" customModule="sajdaApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="190" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="190" height="104"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOX-04-P46">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="104"/>
+                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fOX-04-P46" secondAttribute="trailing" id="3Js-OC-uYZ"/>
+                <constraint firstAttribute="bottom" secondItem="fOX-04-P46" secondAttribute="bottom" id="FoG-FY-N83"/>
+                <constraint firstItem="fOX-04-P46" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Uyy-JA-Ld1"/>
+                <constraint firstItem="fOX-04-P46" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bi8-t1-Wpy"/>
+            </constraints>
+            <size key="customSize" width="190" height="104"/>
+            <connections>
+                <outlet property="groupTilte" destination="fOX-04-P46" id="RPK-Lv-clf"/>
+            </connections>
+            <point key="canvasLocation" x="230.53435114503816" y="6.3380281690140849"/>
+        </collectionViewCell>
+    </objects>
+</document>

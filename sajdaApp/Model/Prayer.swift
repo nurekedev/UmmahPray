@@ -11,15 +11,13 @@ import UIKit
 
 
 struct Prayer{
-    var timeCollection:[String]
     
+    var timeCollection:[String]
+    var location: String
     
     var getfiveTimeCollection: [String] {
         return timeCollection
     }
-    
-   
-    
     
 }
 

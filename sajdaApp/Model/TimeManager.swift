@@ -41,9 +41,8 @@ struct TimeManager{
         dateFormatter.dateFormat = "d MMMM, yyyy"
         let formattedDate = dateFormatter.string(from: currentDate)
         return formattedDate
-
-        
     }
+    
     var dateFormatterText: String{
         
         let currentDate = Date()
@@ -54,28 +53,62 @@ struct TimeManager{
         return formattedDate.capitalized
     }
     
+    var dateFormatterHours: String{
+        
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let formattedDate = dateFormatter.string(from: currentDate)
+        
+        return formattedDate.capitalized
+    }
+    
+    var hijraWeekDayFormatterText: String{
+        
+        let currentDate = Date()
+        let calendar = Calendar(identifier: .islamicCivil)
+        let dateFormatter = DateFormatter()
+        dateFormatter.calendar = calendar
+        dateFormatter.dateFormat = "EEEE"
+        let formattedDate = dateFormatter.string(from: currentDate)
+        
+        return formattedDate.capitalized
+    }
+    
+    var hijraFormatterText: String{
+        
+        let currentDate = Date()
+        let calendar = Calendar(identifier: .islamicCivil)
+        let dateFormatter = DateFormatter()
+        dateFormatter.calendar = calendar
+        dateFormatter.dateFormat = "d MMMM, yyyy"
+        let formattedDate = dateFormatter.string(from: currentDate)
+        return formattedDate
+        
+    }
+    
    
-    // Creating api's URL
+   
     let apiUrl1 = "http://api.aladhan.com/v1/timings/"
 
     
     func getTempCityName(crData: String, c1: CLLocationDegrees, c2: CLLocationDegrees){
         let initialUrl = ("\(apiUrl1)\(crData)?latitude=\(c1)&longitude=\(c2)&method=2")
         performUrl(with: initialUrl)
-        print(apiUrl1)
+      
     }
     var delegate: TimeManagerDelegate?
 
     func performUrl(with urlString:String){
 
 
-        // Crating URL
+
         if let url = URL(string: urlString){
 
-            // Creating SESSION
+
             let session = URLSession(configuration: .default)
 
-            // creating a TASK
+ 
             let task = session.dataTask(with: url) { data, response, error in
 
             
@@ -93,7 +126,6 @@ struct TimeManager{
 
             }
 
-            // Start a task
             task.resume()
 
         }
@@ -108,19 +140,23 @@ struct TimeManager{
             let decodedLast = try decoder.decode(PrayerModel.self, from: decodedData)
             
             let fajr = decodedLast.data.timings.Fajr
+            let sunrise = decodedLast.data.timings.Sunrise
             let dhuhr = decodedLast.data.timings.Dhuhr
             let asr = decodedLast.data.timings.Asr
             let maghrib = decodedLast.data.timings.Maghrib
             let isha = decodedLast.data.timings.Isha
+            
+            let location = decodedLast.data.meta.timezone
+    
 
-            let fiveTime = [fajr, dhuhr, asr, maghrib, isha]
+            let fiveTime = [fajr, sunrise, dhuhr, asr, maghrib, isha]
+            let lplace = location
             
             
          
             
 
-            let prayerM = Prayer(timeCollection: fiveTime)
-//            print(prayerM)
+            let prayerM = Prayer(timeCollection: fiveTime, location: lplace)
             return prayerM
             
             
@@ -133,5 +169,36 @@ struct TimeManager{
 
     }
     
+   
+
+
+
+    
+    
+    func currentTableTime(fiveTime:[String])->Int{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let currentTimeString = dateFormatter.string(from: Date())
+   
+        
+        
+        switch currentTimeString{
+        case fiveTime[0]..<fiveTime[1]:
+            return 0
+        case fiveTime[1]..<fiveTime[2]:
+            return 1
+        case fiveTime[2]..<fiveTime[3]:
+            return 2
+        case fiveTime[3]..<fiveTime[4]:
+            return 3
+        case fiveTime[4]..<fiveTime[5]:
+            return 4
+        default:
+            return 5
+        }
+        
+    }
+       
 
 }
