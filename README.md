@@ -1,5 +1,5 @@
 ## UmmahPray 
-![60](https://github.com/nurekedev/UmmahPray/assets/91678403/70dd63de-e211-447c-aac6-0cdd4ac235e4)
+![imgonline-com-ua-Resize-OUCkfXRfPaCAOG](https://github.com/nurekedev/UmmahPray/assets/91678403/8f721ed0-b2df-4ba5-a5c0-86106cc95246)
 
 
 ## Описание
