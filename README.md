@@ -1,6 +1,6 @@
 ## UmmahPray 
 
-<img src="[путь_к_изображению](https://github.com/nurekedev/UmmahPray/assets/91678403/59b586d1-c042-43bd-816e-cea3cea3d2f5)" alt="Описание изображения" width="500" height="300">
+<img src="[https://github.com/nurekedev/UmmahPray/assets/91678403/59b586d1-c042-43bd-816e-cea3cea3d2f5]" alt="Описание изображения" width="500" height="300">
 
 
 
